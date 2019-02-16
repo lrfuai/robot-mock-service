@@ -4,15 +4,15 @@
   "description": "A Mocked Bot for Development and Test Purpose",
   "state": {
     "type": "mqtt",
-    "port": ""
+    "port": "1883"
   },
   "server": {
     "type": "http",
-    "port": ""
+    "port": "1883"
   },
   "components":[
     {
-      "type": "sensor.distance.ultrasonic",
+      "type": "sensor.ultrasonic",
       "id": "ultrasonic-front",
       "description": "Ultrasonic sensor model RS74"
     },
