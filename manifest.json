@@ -1,0 +1,50 @@
+{
+  "name": "mocked",
+  "version": "0.1",
+  "description": "A Mocked Bot for Development and Test Purpose",
+  "state": {
+    "type": "mqtt",
+    "port": ""
+  },
+  "server": {
+    "type": "http",
+    "port": ""
+  },
+  "components":[
+    {
+      "type": "sensor.distance.ultrasonic",
+      "id": "ultrasonic-front",
+      "description": "Ultrasonic sensor model RS74"
+    },
+    {
+      "type": "sensor.bumper",
+      "id": "bumper-front-left",
+      "description": "Standard Metalic Bumper"
+    },
+    {
+      "type": "sensor.bumper",
+      "id": "bumper-front-right",
+      "description": "Standard Metalic Bumper"
+    },
+    {
+      "type": "actuator.motor.cc",
+      "id": "motor-left",
+      "description": "CC Generic motor"
+    },
+    {
+      "type": "actuator.motor.cc",
+      "id": "motor-right",
+      "description": "CC Generic motor"
+    },
+    {
+      "type": "actuator.led",
+      "id": "led-front-left",
+      "description": "Luminic LED"
+    },
+    {
+      "type": "actuator.led",
+      "id": "led-front-right",
+      "description": "Luminic LED"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "robot-mock-service",
+  "version": "1.0.0",
+  "description": "A Mock for Developmetn and Test Purpose",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrfuai/robot-mock-service.git"
+  },
+  "keywords": [
+    "Robot",
+    "Mock"
+  ],
+  "author": "Alejandro Cena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrfuai/robot-mock-service/issues"
+  },
+  "homepage": "https://github.com/lrfuai/robot-mock-service#readme",
+  "dependencies": {
+    "mqtt": "^2.18.8",
+    "nconf": "^0.10.0",
+    "restify": "^7.7.0",
+    "winston": "^3.2.1"
+  }
+}
