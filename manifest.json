@@ -12,37 +12,37 @@
   },
   "components":[
     {
-      "type": "sensor.ultrasonic",
+      "type": "sensors.ultrasonic",
       "id": "ultrasonic-front",
       "description": "Ultrasonic sensor model RS74"
     },
     {
-      "type": "sensor.bumper",
+      "type": "sensors.bumper",
       "id": "bumper-front-left",
       "description": "Standard Metalic Bumper"
     },
     {
-      "type": "sensor.bumper",
+      "type": "sensors.bumper",
       "id": "bumper-front-right",
       "description": "Standard Metalic Bumper"
     },
     {
-      "type": "actuator.motor.cc",
+      "type": "actuators.motor.cc",
       "id": "motor-left",
       "description": "CC Generic motor"
     },
     {
-      "type": "actuator.motor.cc",
+      "type": "actuators.motor.cc",
       "id": "motor-right",
       "description": "CC Generic motor"
     },
     {
-      "type": "actuator.led",
+      "type": "actuators.led",
       "id": "led-front-left",
       "description": "Luminic LED"
     },
     {
-      "type": "actuator.led",
+      "type": "actuators.led",
       "id": "led-front-right",
       "description": "Luminic LED"
     }
