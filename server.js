@@ -1,43 +1,38 @@
 'use strict';
-const restify = require('restify');
-const logger = require('./lib/logger');
-const config = require('./config');
-const endpoints = require('./lib/endpoints');
+const BotCore = require('bot-control-core');
 const manifest = require('./manifest');
 
-const server = restify.createServer({name: NAME});
+const {server,messages,browser} = BotCore(manifest);
+server();
 
-server.use(restify.plugins.acceptParser(server.acceptable));
-server.use(restify.plugins.queryParser());
-server.use(restify.plugins.bodyParser({mapParams: true}));
-
-endpoints(server);
-
-server.get('/', function (req, res, next) {
-  res.send(manifest);
-  return next();
+messages.on(messages.Events.SERVER_COMPONENTS_LOAD_COMPLETE, ({port}) => {
+  console.log('Server Started at port ' + port)
 });
 
-server.put('/setup', function (req, res, next) {
-  res.send(manifest);
-  return next();
+browser.getComponentById('ultrasonic-front').on(messages.Events.COMPONENT_REACHED,({id,responder}) => {
+  responder.ok(id)
 });
 
-server.get('/ping', function (req, res, next) {
-  res.send('pong');
-  logger.info('Ping');
-  return next();
+browser.getComponentById('bumper-front-left').on(messages.Events.COMPONENT_REACHED,({id,responder}) => {
+  responder.ok(id)
 });
 
-if (module === require.main) {
-  // Start the server
-  server.listen(config.get('PORT'),
-    () => {
-      logger.info(server.name + ' listening at ' + server.url);
-    }
-  );
-}
+browser.getComponentById('bumper-front-right').on(messages.Events.COMPONENT_REACHED,({id,responder}) => {
+  responder.ok(id)
+});
 
-module.exports = {
-  server: server
-};
+browser.getComponentById('motor-left').on(messages.Events.COMPONENT_REACHED,({id,responder}) => {
+  responder.ok(id)
+});
+
+browser.getComponentById('motor-right').on(messages.Events.COMPONENT_REACHED,({id,responder}) => {
+  responder.ok(id)
+});
+
+browser.getComponentById('led-front-left').on(messages.Events.COMPONENT_REACHED,({id,responder}) => {
+  responder.ok(id)
+});
+
+browser.getComponentById('led-front-right').on(messages.Events.COMPONENT_REACHED,({id,responder}) => {
+  responder.ok(id)
+});
