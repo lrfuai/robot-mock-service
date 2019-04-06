@@ -6,12 +6,9 @@
   "state": {
     "port": "1883"
   },
-  "discovery": {
-    "endpoint": "http://localhost:8080"
-  },
   "debug": true,
   "server": {
-    "port": "6000"
+    "port": "9000"
   },
   "components":[
     {
