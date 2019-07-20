@@ -10,30 +10,6 @@ messages.on(messages.Events.SERVER_COMPONENTS_LOAD_COMPLETE, ({port}) => {
 
 server();
 
-browser.getComponentById('ultrasonic-front').on(messages.Events.COMPONENT_REACHED,({id,action,options,responder}) => {
-  responder.ok(id);
-});
-
-browser.getComponentById('bumper-front-left').on(messages.Events.COMPONENT_REACHED,({id,action,options,responder}) => {
-  responder.ok(id);
-});
-
-browser.getComponentById('bumper-front-right').on(messages.Events.COMPONENT_REACHED,({id,action,options,responder}) => {
-  responder.ok(id);
-});
-
-browser.getComponentById('motor-left').on(messages.Events.COMPONENT_REACHED,({id,action,options,args,responder}) => {
-  responder.ok(id);
-});
-
-browser.getComponentById('motor-right').on(messages.Events.COMPONENT_REACHED,({id,action,options,responder}) => {
-  responder.ok(id);
-});
-
-browser.getComponentById('led-front-left').on(messages.Events.COMPONENT_REACHED,({id,action,options,responder}) => {
-  responder.error(id);
-});
-
-browser.getComponentById('led-front-right').on(messages.Events.COMPONENT_REACHED,({id,action,options,responder}) => {
-  responder.invalid(id);
+browser.getActionByType('movement').on(messages.Events.ACTION_REACHED,(payload) => {
+  console.info(payload);
 });

@@ -11,40 +11,11 @@
     "port": "9000"
   },
   "components":[
+  ],
+  "actions": [
     {
-      "type": "sensors:distance:ultrasonic",
-      "id": "ultrasonic-front",
-      "description": "Ultrasonic sensor model RS74"
-    },
-    {
-      "type": "sensors:bumpers:boolean",
-      "id": "bumper-front-left",
-      "description": "Standard Metalic Bumper"
-    },
-    {
-      "type": "sensors:bumpers:boolean",
-      "id": "bumper-front-right",
-      "description": "Standard Metalic Bumper"
-    },
-    {
-      "type": "actuators:motors:cc",
-      "id": "motor-left",
-      "description": "CC Generic motor"
-    },
-    {
-      "type": "actuators:motors:cc",
-      "id": "motor-right",
-      "description": "CC Generic motor"
-    },
-    {
-      "type": "actuators:lights:led",
-      "id": "led-front-left",
-      "description": "Luminic LED"
-    },
-    {
-      "type": "actuators:lights:led",
-      "id": "led-front-right",
-      "description": "Luminic LED"
+      "type": "movement",
+      "description": "Robot moves forward"
     }
   ]
 }
